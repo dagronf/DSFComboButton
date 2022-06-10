@@ -48,8 +48,12 @@ import Foundation
 
 			if let u = self.unified {
 				u.title = self.title ?? ""
+				u.image = self.image
 				if u.title.isEmpty {
 					u.imagePosition = .imageOnly
+				}
+				else if u.image == nil {
+					u.imagePosition = .noImage
 				}
 				else {
 					u.imagePosition = .imageLeading
@@ -64,11 +68,23 @@ import Foundation
 	@IBInspectable public var image: NSImage? = nil {
 		didSet {
 			self.segmented?.setImage(self.image, forSegment: 0)
-			self.unified?.image = self.image
+			if let u = self.unified {
+				u.image = self.image
+				if u.title.isEmpty {
+					u.imagePosition = .imageOnly
+				}
+				else if u.image == nil {
+					u.imagePosition = .noImage
+				}
+				else {
+					u.imagePosition = .imageLeading
+				}
+			}
+
 			self.invalidateIntrinsicContentSize()
 		}
 	}
-	
+
 	/// The scaling behavior to apply to the button’s image.
 	@IBInspectable public var imageScaling: NSImageScaling = .scaleProportionallyDown {
 		didSet {
@@ -157,10 +173,6 @@ import Foundation
 		case .unified: return self.segmented?.intrinsicContentSize ?? .zero
 		}
 	}
-	
-//	override public func awakeFromNib() {
-//		self.segmented?.setMenu(self.menu, forSegment: 1)
-//	}
 	
 	// Private
 	internal var segmented: NSSegmentedControl?

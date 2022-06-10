@@ -35,6 +35,7 @@ extension DSFComboButton {
 		self.translatesAutoresizingMaskIntoConstraints = false
 		self.stringValue = ""
 		self.isEnabled = true
+		self.controlSize = .regular
 		self.rebuild()
 	}
 
