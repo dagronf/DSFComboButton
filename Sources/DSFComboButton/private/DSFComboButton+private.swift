@@ -100,8 +100,11 @@ extension DSFComboButton {
 		if dropdown.title.count == 0 {
 			dropdown.imagePosition = .imageOnly
 		}
-		else {
+		else if dropdown.image != nil {
 			dropdown.imagePosition = .imageLeading
+		}
+		else {
+			dropdown.imagePosition = .noImage
 		}
 		dropdown.imageScaling = self.imageScaling
 		dropdown.setButtonType(.momentaryPushIn)
@@ -156,7 +159,7 @@ extension DSFComboButton {
 }
 
 // The arrow image
-private let __ArrowImage = NSImage.createByDrawingInto(width: 5, height: 5, isTemplate: true) {
+private let __ArrowImage = NSImage.CreateByLockingFocus(size: CGSize(width: 5, height: 5), isTemplate: true) { drawingRect in
 	let bezierPath = NSBezierPath()
 	bezierPath.move(to: NSPoint(x: 0.5, y: 3.5))
 	bezierPath.line(to: NSPoint(x: 2.5, y: 1.5))

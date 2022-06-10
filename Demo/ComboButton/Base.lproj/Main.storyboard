@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21179.7"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ComboButton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="611" height="512"/>
+                        <rect key="frame" x="0.0" y="0.0" width="776" height="290"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <gridView xPlacement="leading" yPlacement="bottom" rowAlignment="none" rowSpacing="8" columnSpacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DbW-Zq-lZW">
-                                <rect key="frame" x="20" y="286" width="502" height="206"/>
+                                <rect key="frame" x="20" y="64" width="709" height="206"/>
                                 <rows>
                                     <gridRow id="IfV-8q-bSf"/>
                                     <gridRow yPlacement="center" id="XMl-9e-ava"/>
@@ -722,17 +722,29 @@
                                 </rows>
                                 <columns>
                                     <gridColumn xPlacement="trailing" id="YPR-kQ-BOr"/>
+                                    <gridColumn xPlacement="center" id="UOY-75-ZG4"/>
                                     <gridColumn xPlacement="center" id="foN-jz-imM"/>
                                     <gridColumn xPlacement="center" id="8X8-6I-rjU"/>
                                     <gridColumn xPlacement="center" id="xhD-94-8oy"/>
                                     <gridColumn xPlacement="center" id="J4O-1D-Bog"/>
+                                    <gridColumn xPlacement="center" id="ZqL-aE-RHC"/>
                                 </columns>
                                 <gridCells>
                                     <gridCell row="IfV-8q-bSf" column="YPR-kQ-BOr" id="afR-dk-Anb"/>
+                                    <gridCell row="IfV-8q-bSf" column="UOY-75-ZG4" id="Wm3-PI-GSq">
+                                        <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="esk-HB-39F">
+                                            <rect key="frame" x="73" y="190" width="74" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="split, image" id="nfu-qb-Snx">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </gridCell>
                                     <gridCell row="IfV-8q-bSf" column="foN-jz-imM" id="sse-55-ZJ3">
                                         <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gBF-K5-8vw">
-                                            <rect key="frame" x="77" y="190" width="66" height="16"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" title="split, label" id="f5F-Xz-grE">
+                                            <rect key="frame" x="188" y="190" width="60" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="split, title" id="f5F-Xz-grE">
                                                 <font key="font" usesAppearanceFont="YES"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -741,8 +753,8 @@
                                     </gridCell>
                                     <gridCell row="IfV-8q-bSf" column="8X8-6I-rjU" id="NWK-4o-AgS">
                                         <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-3O-1v8">
-                                            <rect key="frame" x="166" y="190" width="107" height="16"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" title="split, label/image" id="V9n-wV-yuX">
+                                            <rect key="frame" x="296" y="190" width="60" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="split, title" id="V9n-wV-yuX">
                                                 <font key="font" usesAppearanceFont="YES"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -751,7 +763,7 @@
                                     </gridCell>
                                     <gridCell row="IfV-8q-bSf" column="xhD-94-8oy" id="vi3-lu-nQM">
                                         <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-XT-sD1">
-                                            <rect key="frame" x="306" y="190" width="46" height="16"/>
+                                            <rect key="frame" x="411" y="190" width="46" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="unified" id="WKW-fF-Swg">
                                                 <font key="font" usesAppearanceFont="YES"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -761,8 +773,18 @@
                                     </gridCell>
                                     <gridCell row="IfV-8q-bSf" column="J4O-1D-Bog" id="8ZS-aq-03k">
                                         <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x6Q-39-8SH">
-                                            <rect key="frame" x="385" y="190" width="119" height="16"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" title="unified label/image" id="hGc-UJ-AgV">
+                                            <rect key="frame" x="490" y="190" width="113" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="unified title/image" id="hGc-UJ-AgV">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </gridCell>
+                                    <gridCell row="IfV-8q-bSf" column="ZqL-aE-RHC" id="BHP-p4-X3J">
+                                        <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0kd-0t-7lj">
+                                            <rect key="frame" x="621" y="190" width="76" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="unified, title" id="YfN-mC-3yE">
                                                 <font key="font" usesAppearanceFont="YES"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -779,9 +801,30 @@
                                             </textFieldCell>
                                         </textField>
                                     </gridCell>
+                                    <gridCell row="XMl-9e-ava" column="UOY-75-ZG4" id="XfY-Fb-ei0">
+                                        <customView key="contentView" horizontalCompressionResistancePriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="Vsk-F8-2aY" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="60" y="152" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="status-bar-icon"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="pressed:" target="XfG-lQ-9wD" id="nv5-Ew-l3e"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="IRp-wI-epn"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                     <gridCell row="XMl-9e-ava" column="foN-jz-imM" id="2B9-Lk-icM">
                                         <customView key="contentView" horizontalCompressionResistancePriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="DPd-Jk-09m" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="60" y="152" width="100" height="30"/>
+                                            <rect key="frame" x="168" y="152" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -802,7 +845,7 @@
                                     </gridCell>
                                     <gridCell row="XMl-9e-ava" column="8X8-6I-rjU" id="efC-Oy-XHE">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="VhS-qX-z8F" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="170" y="152" width="100" height="30"/>
+                                            <rect key="frame" x="276" y="152" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -824,7 +867,7 @@
                                     </gridCell>
                                     <gridCell row="XMl-9e-ava" column="xhD-94-8oy" id="1vr-Lx-Lg2">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="MlP-8E-aQA" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="279" y="152" width="100" height="30"/>
+                                            <rect key="frame" x="384" y="152" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -845,7 +888,7 @@
                                     </gridCell>
                                     <gridCell row="XMl-9e-ava" column="J4O-1D-Bog" id="keC-wV-mJc">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="7Cm-lX-2o8" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="395" y="152" width="100" height="30"/>
+                                            <rect key="frame" x="497" y="152" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -865,6 +908,27 @@
                                             </connections>
                                         </customView>
                                     </gridCell>
+                                    <gridCell row="XMl-9e-ava" column="ZqL-aE-RHC" id="PYF-4I-Pye">
+                                        <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="pjJ-7d-Hea" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="609" y="152" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="unified button"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="unifiedpressed:" target="XfG-lQ-9wD" id="2jD-Wn-kiG"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="uTO-JR-jT8"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                     <gridCell row="k2c-9q-WtZ" column="YPR-kQ-BOr" id="qiT-gy-iu3">
                                         <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GzO-dG-jRH">
                                             <rect key="frame" x="18" y="121" width="36" height="16"/>
@@ -875,9 +939,30 @@
                                             </textFieldCell>
                                         </textField>
                                     </gridCell>
+                                    <gridCell row="k2c-9q-WtZ" column="UOY-75-ZG4" id="EDC-p5-h5i">
+                                        <customView key="contentView" horizontalCompressionResistancePriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="cxV-SJ-Aif" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="60" y="114" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="status-bar-icon"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="pressed:" target="XfG-lQ-9wD" id="gDx-Z2-sN1"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="5Eh-s2-JNA"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                     <gridCell row="k2c-9q-WtZ" column="foN-jz-imM" id="21W-ct-l95">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="ozr-v1-384" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="60" y="114" width="100" height="30"/>
+                                            <rect key="frame" x="168" y="114" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -898,7 +983,7 @@
                                     </gridCell>
                                     <gridCell row="k2c-9q-WtZ" column="8X8-6I-rjU" id="OQ4-eP-Xgb">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="x28-B6-0Vs" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="170" y="114" width="100" height="30"/>
+                                            <rect key="frame" x="276" y="114" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -920,7 +1005,7 @@
                                     </gridCell>
                                     <gridCell row="k2c-9q-WtZ" column="xhD-94-8oy" id="xBO-1l-Jvf">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="6Af-z7-Q2g" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="279" y="114" width="100" height="30"/>
+                                            <rect key="frame" x="384" y="114" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -941,7 +1026,7 @@
                                     </gridCell>
                                     <gridCell row="k2c-9q-WtZ" column="J4O-1D-Bog" id="ZIp-vK-aEu">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="VEp-8r-iRS" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="395" y="114" width="100" height="30"/>
+                                            <rect key="frame" x="497" y="114" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -961,6 +1046,27 @@
                                             </connections>
                                         </customView>
                                     </gridCell>
+                                    <gridCell row="k2c-9q-WtZ" column="ZqL-aE-RHC" id="65h-6o-adC">
+                                        <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="lbI-aV-bqP" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="609" y="114" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="unified button"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="unifiedpressed:" target="XfG-lQ-9wD" id="FhG-Ew-hAH"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="8c9-qY-TmL"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                     <gridCell row="vPy-h3-gFu" column="YPR-kQ-BOr" id="38Y-mr-JLA">
                                         <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ewc-Sk-xpE">
                                             <rect key="frame" x="7" y="83" width="47" height="16"/>
@@ -971,9 +1077,30 @@
                                             </textFieldCell>
                                         </textField>
                                     </gridCell>
+                                    <gridCell row="vPy-h3-gFu" column="UOY-75-ZG4" id="fL0-bi-cyS">
+                                        <customView key="contentView" horizontalCompressionResistancePriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="TUb-m2-ulF" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="60" y="76" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="status-bar-icon"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="pressed:" target="XfG-lQ-9wD" id="k0O-Il-mVf"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="N0y-Dk-emV"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                     <gridCell row="vPy-h3-gFu" column="foN-jz-imM" id="dhS-oM-tbt">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="QEW-4Y-5xh" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="60" y="76" width="100" height="30"/>
+                                            <rect key="frame" x="168" y="76" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -994,7 +1121,7 @@
                                     </gridCell>
                                     <gridCell row="vPy-h3-gFu" column="8X8-6I-rjU" id="fDl-jy-8nm">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="h8M-pu-4Yi" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="170" y="76" width="100" height="30"/>
+                                            <rect key="frame" x="276" y="76" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1016,7 +1143,7 @@
                                     </gridCell>
                                     <gridCell row="vPy-h3-gFu" column="xhD-94-8oy" id="UP8-wW-mkb">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="XJ1-fT-QTd" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="279" y="76" width="100" height="30"/>
+                                            <rect key="frame" x="384" y="76" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1037,7 +1164,7 @@
                                     </gridCell>
                                     <gridCell row="vPy-h3-gFu" column="J4O-1D-Bog" id="kAJ-RY-GoX">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-L6-SDN" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="395" y="76" width="100" height="30"/>
+                                            <rect key="frame" x="497" y="76" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1057,6 +1184,27 @@
                                             </connections>
                                         </customView>
                                     </gridCell>
+                                    <gridCell row="vPy-h3-gFu" column="ZqL-aE-RHC" id="UQ2-TW-UTx">
+                                        <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="Szy-ZR-SN9" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="609" y="76" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="unified button"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="unifiedpressed:" target="XfG-lQ-9wD" id="b4R-2W-ww9"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="S9H-Pi-Ib1"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                     <gridCell row="lOr-2D-34o" column="YPR-kQ-BOr" id="Ptz-ag-96r">
                                         <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tgx-5A-Umn">
                                             <rect key="frame" x="19" y="45" width="35" height="16"/>
@@ -1067,9 +1215,30 @@
                                             </textFieldCell>
                                         </textField>
                                     </gridCell>
+                                    <gridCell row="lOr-2D-34o" column="UOY-75-ZG4" id="Xmc-D7-e50">
+                                        <customView key="contentView" horizontalCompressionResistancePriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="eee-tZ-dGX" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="60" y="38" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="status-bar-icon"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="pressed:" target="XfG-lQ-9wD" id="U4Y-4F-EYO"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="xGi-2d-xCa"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                     <gridCell row="lOr-2D-34o" column="foN-jz-imM" id="YoL-Lg-nn8">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="puT-EZ-Rzh" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="60" y="38" width="100" height="30"/>
+                                            <rect key="frame" x="168" y="38" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1090,7 +1259,7 @@
                                     </gridCell>
                                     <gridCell row="lOr-2D-34o" column="8X8-6I-rjU" id="DRL-vy-XLJ">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="v2g-Ts-jlB" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="170" y="38" width="100" height="30"/>
+                                            <rect key="frame" x="276" y="38" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1112,7 +1281,7 @@
                                     </gridCell>
                                     <gridCell row="lOr-2D-34o" column="xhD-94-8oy" id="SZx-St-h38">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="gin-9X-tXF" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="279" y="38" width="100" height="30"/>
+                                            <rect key="frame" x="384" y="38" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1133,7 +1302,7 @@
                                     </gridCell>
                                     <gridCell row="lOr-2D-34o" column="J4O-1D-Bog" id="2HQ-BG-gxr">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Y-p2-Lac" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="395" y="38" width="100" height="30"/>
+                                            <rect key="frame" x="497" y="38" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1153,6 +1322,27 @@
                                             </connections>
                                         </customView>
                                     </gridCell>
+                                    <gridCell row="lOr-2D-34o" column="ZqL-aE-RHC" id="dQw-Vh-hYW">
+                                        <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="MeG-VE-QPv" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="609" y="38" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="unified button"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="unifiedpressed:" target="XfG-lQ-9wD" id="3kd-u4-xdR"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="LoI-kW-niH"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                     <gridCell row="Rof-n9-dJ2" column="YPR-kQ-BOr" id="8Eo-rX-bJ4">
                                         <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2sA-Fy-D9N">
                                             <rect key="frame" x="-2" y="7" width="56" height="16"/>
@@ -1163,9 +1353,31 @@
                                             </textFieldCell>
                                         </textField>
                                     </gridCell>
+                                    <gridCell row="Rof-n9-dJ2" column="UOY-75-ZG4" id="iZs-SF-5lh">
+                                        <customView key="contentView" horizontalCompressionResistancePriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-0u-4NZ" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="60" y="0.0" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="status-bar-icon"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="ib_isEnabled" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="pressed:" target="XfG-lQ-9wD" id="kQ1-x5-6n9"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="eRn-hQ-Z1f"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                     <gridCell row="Rof-n9-dJ2" column="foN-jz-imM" id="16d-bm-iVD">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="jZf-Ge-Vvx" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="60" y="0.0" width="100" height="30"/>
+                                            <rect key="frame" x="168" y="0.0" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1187,7 +1399,7 @@
                                     </gridCell>
                                     <gridCell row="Rof-n9-dJ2" column="8X8-6I-rjU" id="qEM-9X-Kgg">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="a22-xx-esA" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="170" y="0.0" width="100" height="30"/>
+                                            <rect key="frame" x="276" y="0.0" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1210,7 +1422,7 @@
                                     </gridCell>
                                     <gridCell row="Rof-n9-dJ2" column="xhD-94-8oy" id="pdM-wW-sfb">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="c8D-FU-uG0" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="279" y="0.0" width="100" height="30"/>
+                                            <rect key="frame" x="384" y="0.0" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1232,7 +1444,7 @@
                                     </gridCell>
                                     <gridCell row="Rof-n9-dJ2" column="J4O-1D-Bog" id="Lim-Yp-tc2">
                                         <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="4h1-wR-tz3" customClass="DSFComboButton" customModule="DSFComboButton">
-                                            <rect key="frame" x="395" y="0.0" width="100" height="30"/>
+                                            <rect key="frame" x="497" y="0.0" width="100" height="30"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
                                                     <integer key="value" value="2"/>
@@ -1253,12 +1465,30 @@
                                             </connections>
                                         </customView>
                                     </gridCell>
+                                    <gridCell row="Rof-n9-dJ2" column="ZqL-aE-RHC" id="45o-SU-seQ">
+                                        <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="ZNB-0H-Vwo" customClass="DSFComboButton" customModule="DSFComboButton">
+                                            <rect key="frame" x="609" y="0.0" width="100" height="30"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="controlSize">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_controlSize">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ib_style">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="ib_isEnabled" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="unified button"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="unifiedpressed:" target="XfG-lQ-9wD" id="VcE-NC-uhn"/>
+                                                <outlet property="menu" destination="l9m-bm-zxG" id="Kgi-K2-7Oq"/>
+                                            </connections>
+                                        </customView>
+                                    </gridCell>
                                 </gridCells>
                             </gridView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rT4-0R-gg7" customClass="DSFComboButton" customModule="DSFComboButton">
-                                <rect key="frame" x="20" y="159" width="163" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="DbW-Zq-lZW" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="khF-8C-V16"/>
@@ -1287,11 +1517,12 @@
                     </items>
                 </menu>
             </objects>
-            <point key="canvasLocation" x="64.5" y="840"/>
+            <point key="canvasLocation" x="92" y="834"/>
         </scene>
     </scenes>
     <resources>
-        <image name="NSActionTemplate" width="128" height="128"/>
+        <image name="NSActionTemplate" width="15" height="15"/>
         <image name="NSAddTemplate" width="14" height="13"/>
+        <image name="status-bar-icon" width="18" height="18"/>
     </resources>
 </document>

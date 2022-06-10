@@ -1,5 +1,5 @@
 //
-//  utils.swift
+//  Image+CreateByDrawing.swift
 //
 //  Copyright © 2022 Darren Ford. All rights reserved.
 //
@@ -27,18 +27,24 @@
 import AppKit
 import Foundation
 
-internal extension NSImage {
-	static func createByDrawingInto(
-		width: CGFloat,
-		height: CGFloat,
+extension NSImage {
+	/// Create a NSImage of a specific size, lock focus on it and call the drawing block
+	/// - Parameters:
+	///   - size: The resulting size of the image
+	///   - isTemplate: If true, marks the returned image as a template image
+	///   - drawingBlock: The block for drawing into the image, passing the drawing context
+	/// - Returns: The resulting image
+	/// - Throws: `DSFImageGeneratorError`
+	static func CreateByLockingFocus(
+		size: NSSize,
 		isTemplate: Bool = false,
-		_ drawBlock: () throws -> Void
+		_ drawingBlock: (NSRect) throws -> Void
 	) rethrows -> NSImage {
-		let image = NSImage(size: NSSize(width: width, height: height))
+		let image = NSImage(size: size)
 		do {
 			image.lockFocus()
 			defer { image.unlockFocus() }
-			try drawBlock()
+			try drawingBlock(NSRect(origin: .zero, size: size))
 		}
 		image.isTemplate = isTemplate
 		return image
