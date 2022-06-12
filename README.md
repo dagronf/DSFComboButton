@@ -10,11 +10,15 @@
 </p>
 <p align="center">
 
-A drop-in `NSComboButton` replacement with pre macOS 13 support.
+A drop-in [`NSComboButton`](https://developer.apple.com/documentation/appkit/nscombobutton) replacement control with pre macOS 13 support.
 
-For when you want to adopt this control but have to maintain compatibility back to 10.13
+For when you want to adopt NSComboButton but have to maintain compatibility back to 10.13.
 
 ## Features
+
+DSFComboButton attempts to match the NSComboButton control API as closely as possible.
+The programmatic interface is almost identical, however (unfortunately) Interface Builder support in
+a custom control is very limited so I've done as best I can.
 
 ### Split style
 

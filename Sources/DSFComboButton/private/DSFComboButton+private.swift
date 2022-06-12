@@ -24,6 +24,8 @@
 //  SOFTWARE.
 //
 
+#if os(macOS)
+
 import AppKit
 import Foundation
 
@@ -69,6 +71,7 @@ extension DSFComboButton {
 		sc.setImageScaling(.scaleProportionallyDown, forSegment: 0)
 		sc.setLabel(self.title ?? "", forSegment: 0)
 		sc.setImage(__ArrowImage, forSegment: 1)
+		sc.setAlignment(.justified, forSegment: 0)
 
 		let f = NSFont.systemFont(ofSize: NSFont.systemFontSize(for: self.controlSize))
 		sc.setWidth(min(16, f.pointSize * 1.3), forSegment: 1)
@@ -150,14 +153,65 @@ extension DSFComboButton {
 			if let menu = self.menu {
 				menu.popUp(
 					positioning: menu.item(at: 0),
-					at: CGPoint(x: w, y: -8),
+					at: CGPoint(x: w, y: -6),
 					in: self
 				)
 			}
 		}
 	}
-
 }
+
+public extension DSFComboButton {
+	override func prepareForInterfaceBuilder() {
+		self.setup()
+		self.rebuild()
+	}
+
+	override var intrinsicContentSize: NSSize {
+		switch self.style {
+		case .split: return self.segmented?.intrinsicContentSize ?? .zero
+		case .unified: return self.segmented?.intrinsicContentSize ?? .zero
+		}
+	}
+
+	override var controlSize: NSControl.ControlSize {
+		didSet {
+			let f = NSFont.systemFont(ofSize: NSFont.systemFontSize(for: self.controlSize))
+
+			self.segmented?.controlSize = self.controlSize
+			self.segmented?.font = f
+			self.segmented?.setWidth(min(16, f.pointSize * 1.3), forSegment: 1)
+
+			self.unified?.controlSize = self.controlSize
+			self.unified?.font = f
+
+			self.invalidateIntrinsicContentSize()
+		}
+	}
+
+	override var menu: NSMenu? {
+		didSet {
+			self.segmented?.setMenu(self.menu, forSegment: 1)
+			self.unified?.delayedMenu = self.menu
+			self.unified?.menu = self.menu
+		}
+	}
+
+	override var isEnabled: Bool {
+		didSet {
+			self.segmented?.isEnabled = self.isEnabled
+			self.unified?.isEnabled = self.isEnabled
+		}
+	}
+
+	override var isHidden: Bool {
+		didSet {
+			self.segmented?.isHidden = self.isHidden
+			self.unified?.isHidden = self.isHidden
+		}
+	}
+}
+
 
 // The arrow image
 private let __ArrowImage = NSImage.CreateByLockingFocus(size: CGSize(width: 5, height: 5), isTemplate: true) { drawingRect in
@@ -169,3 +223,5 @@ private let __ArrowImage = NSImage.CreateByLockingFocus(size: CGSize(width: 5, h
 	bezierPath.lineWidth = 1
 	bezierPath.stroke()
 }
+
+#endif

@@ -24,23 +24,13 @@
 //  SOFTWARE.
 //
 
+#if os(macOS)
+
 import AppKit
 import Foundation
 
 @IBDesignable public class DSFComboButton: NSControl {
 
-	@objc public enum Style: UInt {
-		case split = 0
-		case unified = 1
-	}
-	
-	/// The appearance setting that determines how the button presents its menu .
-	@IBInspectable public var style: DSFComboButton.Style = .split {
-		didSet {
-			self.rebuild()
-		}
-	}
-	
 	/// The title for the button
 	@IBInspectable public var title: String? = "" {
 		didSet {
@@ -63,7 +53,7 @@ import Foundation
 			self.invalidateIntrinsicContentSize()
 		}
 	}
-	
+
 	/// The image for the button
 	@IBInspectable public var image: NSImage? = nil {
 		didSet {
@@ -85,38 +75,93 @@ import Foundation
 		}
 	}
 
-	/// The scaling behavior to apply to the button’s image.
-	@IBInspectable public var imageScaling: NSImageScaling = .scaleProportionallyDown {
+	/// Is the control enabled?
+	@IBInspectable public var ib_isEnabled: Bool = true {
 		didSet {
-			self.segmented?.setImageScaling(self.imageScaling, forSegment: 0)
-			self.unified?.imageScaling = self.imageScaling
-			self.invalidateIntrinsicContentSize()
+			self.isEnabled = self.ib_isEnabled
 		}
 	}
+
+	// MARK: Style settings
+
+	@objc public enum Style: UInt {
+		case split = 0
+		case unified = 1
+	}
 	
+	/// The appearance setting that determines how the button presents its menu.
+	public var style: DSFComboButton.Style = .split {
+		didSet {
+			self.rebuild()
+		}
+	}
+
+	/// The appearance setting that determines how the button presents its menu.
+	///
+	///   split == 0
+	///   unified == 1
 	@IBInspectable public var ib_style: UInt = Style.split.rawValue {
 		didSet {
 			self.style = Style(rawValue: self.ib_style) ?? .split
 		}
 	}
-	
-	// case regular = 0
-	// case small = 1
-	// case mini = 2
-	// case large = 3
-	
+
+	// MARK: Control size
+
+	/// The size of the control
+	///
+	/// The value maps to the `NSControl.ControlSize` enum
+	///   regular == 0
+	///   small == 1
+	///   mini == 2
+	///   large == 3
 	@IBInspectable public var ib_controlSize: UInt = 0 {
 		didSet {
 			self.controlSize = NSControl.ControlSize(rawValue: self.ib_controlSize) ?? .regular
 			self.invalidateIntrinsicContentSize()
 		}
 	}
-	
-	@IBInspectable public var ib_isEnabled: Bool = true {
+
+	// MARK: Text alignment
+
+	public var textAlignment: NSTextAlignment = .center {
 		didSet {
-			self.isEnabled = self.ib_isEnabled
+			self.segmented?.setAlignment(textAlignment, forSegment: 0)
 		}
 	}
+
+	/// The alignment of the text/image within the control
+	///
+	///   left = 0 // Visually left aligned
+	///   right = 1 // Visually right aligned
+	///   center = 2 // Visually centered
+	///   justified = 3 // Fully-justified. The last line in a paragraph is natural-aligned.
+	///   natural = 4 // Indicates the default alignment for script
+	@IBInspectable public var ib_textAlignment: NSInteger = NSTextAlignment.justified.rawValue {
+		didSet {
+			self.segmented?.setAlignment(NSTextAlignment(rawValue: ib_textAlignment)!, forSegment: 0)
+		}
+	}
+
+	// MARK: - Image scaling
+
+	/// The scaling behavior to apply to the button’s image.
+	@IBInspectable public var ib_imageScaling: UInt = NSImageScaling.scaleProportionallyDown.rawValue {
+		didSet {
+			self.imageScaling = NSImageScaling(rawValue: self.ib_imageScaling)!
+		}
+	}
+
+	/// The scaling behavior to apply to the button’s image.
+	public var imageScaling: NSImageScaling = .scaleProportionallyDown {
+		didSet {
+			self.segmented?.setImageScaling(self.imageScaling, forSegment: 0)
+			self.unified?.imageScaling = self.imageScaling
+			self.invalidateIntrinsicContentSize()
+		}
+	}
+
+	// MARK: Initializers
 	
 	public init() {
 		super.init(frame: .zero)
@@ -162,58 +207,9 @@ import Foundation
 		self.setup()
 	}
 	
-	override public func prepareForInterfaceBuilder() {
-		self.setup()
-		self.rebuild()
-	}
-	
-	override public var intrinsicContentSize: NSSize {
-		switch self.style {
-		case .split: return self.segmented?.intrinsicContentSize ?? .zero
-		case .unified: return self.segmented?.intrinsicContentSize ?? .zero
-		}
-	}
-	
 	// Private
 	internal var segmented: NSSegmentedControl?
 	internal var unified: DelayedMenuButton?
 }
 
-public extension DSFComboButton {
-	override var controlSize: NSControl.ControlSize {
-		didSet {
-			let f = NSFont.systemFont(ofSize: NSFont.systemFontSize(for: self.controlSize))
-			
-			self.segmented?.controlSize = self.controlSize
-			self.segmented?.font = f
-			self.segmented?.setWidth(min(16, f.pointSize * 1.3), forSegment: 1)
-			
-			self.unified?.controlSize = self.controlSize
-			self.unified?.font = f
-
-			self.invalidateIntrinsicContentSize()
-		}
-	}
-	
-	override var menu: NSMenu? {
-		didSet {
-			self.segmented?.setMenu(self.menu, forSegment: 1)
-			self.unified?.delayedMenu = self.menu
-			self.unified?.menu = self.menu
-		}
-	}
-	
-	override var isEnabled: Bool {
-		didSet {
-			self.segmented?.isEnabled = self.isEnabled
-			self.unified?.isEnabled = self.isEnabled
-		}
-	}
-	
-	override var isHidden: Bool {
-		didSet {
-			self.segmented?.isHidden = self.isHidden
-			self.unified?.isHidden = self.isHidden
-		}
-	}
-}
+#endif

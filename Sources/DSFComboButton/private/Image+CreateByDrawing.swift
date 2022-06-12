@@ -24,6 +24,8 @@
 //  SOFTWARE.
 //
 
+#if os(macOS)
+
 import AppKit
 import Foundation
 
@@ -50,3 +52,5 @@ extension NSImage {
 		return image
 	}
 }
+
+#endif

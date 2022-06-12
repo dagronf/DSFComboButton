@@ -24,6 +24,8 @@
 //  SOFTWARE.
 //
 
+#if os(macOS)
+
 import AppKit
 import Foundation
 
@@ -86,3 +88,5 @@ internal extension DelayedMenuButton {
 		window.postEvent(mouseUp, atStart: false)
 	}
 }
+
+#endif
