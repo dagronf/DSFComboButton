@@ -6,7 +6,24 @@
 	objectVersion = 54;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		234626142855703300F76653 /* All Demos */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 234626172855703300F76653 /* Build configuration list for PBXAggregateTarget "All Demos" */;
+			buildPhases = (
+			);
+			dependencies = (
+				234626192855703D00F76653 /* PBXTargetDependency */,
+				2346261B2855703D00F76653 /* PBXTargetDependency */,
+			);
+			name = "All Demos";
+			productName = "All Demos";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		2346261D285570DB00F76653 /* DSFComboButtonDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2346261C285570DB00F76653 /* DSFComboButtonDynamic */; };
+		2346261E285570DB00F76653 /* DSFComboButtonDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 2346261C285570DB00F76653 /* DSFComboButtonDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2383118C285043F900FD3EA2 /* DSFComboButton in Frameworks */ = {isa = PBXBuildFile; productRef = 2383118B285043F900FD3EA2 /* DSFComboButton */; };
 		23A966C3284EA7C200363782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A966C2284EA7C200363782 /* AppDelegate.swift */; };
 		23A966C5284EA7C200363782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A966C4284EA7C200363782 /* ViewController.swift */; };
@@ -16,8 +33,38 @@
 		23C8634828555F8200F59D88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8634728555F8200F59D88 /* ViewController.swift */; };
 		23C8634A28555F8300F59D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C8634928555F8300F59D88 /* Assets.xcassets */; };
 		23C8634D28555F8300F59D88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C8634B28555F8300F59D88 /* Main.storyboard */; };
-		23C8635328555F9000F59D88 /* DSFComboButton in Frameworks */ = {isa = PBXBuildFile; productRef = 23C8635228555F9000F59D88 /* DSFComboButton */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		234626182855703D00F76653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23A966B7284EA7C200363782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23A966BE284EA7C200363782;
+			remoteInfo = ComboButton;
+		};
+		2346261A2855703D00F76653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23A966B7284EA7C200363782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23C8634228555F8200F59D88;
+			remoteInfo = "Doco Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2346261F285570DB00F76653 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2346261E285570DB00F76653 /* DSFComboButtonDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		238311892850422200FD3EA2 /* DSFComboButton */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DSFComboButton; path = ..; sourceTree = "<group>"; };
@@ -48,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23C8635328555F9000F59D88 /* DSFComboButton in Frameworks */,
+				2346261D285570DB00F76653 /* DSFComboButtonDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +183,7 @@
 				23C8633F28555F8200F59D88 /* Sources */,
 				23C8634028555F8200F59D88 /* Frameworks */,
 				23C8634128555F8200F59D88 /* Resources */,
+				2346261F285570DB00F76653 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,7 +191,7 @@
 			);
 			name = "Doco Demo";
 			packageProductDependencies = (
-				23C8635228555F9000F59D88 /* DSFComboButton */,
+				2346261C285570DB00F76653 /* DSFComboButtonDynamic */,
 			);
 			productName = "Doco Demo";
 			productReference = 23C8634328555F8200F59D88 /* Doco Demo.app */;
@@ -159,6 +207,9 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					234626142855703300F76653 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					23A966BE284EA7C200363782 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -182,6 +233,7 @@
 			targets = (
 				23A966BE284EA7C200363782 /* ComboButton */,
 				23C8634228555F8200F59D88 /* Doco Demo */,
+				234626142855703300F76653 /* All Demos */,
 			);
 		};
 /* End PBXProject section */
@@ -228,6 +280,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		234626192855703D00F76653 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23A966BE284EA7C200363782 /* ComboButton */;
+			targetProxy = 234626182855703D00F76653 /* PBXContainerItemProxy */;
+		};
+		2346261B2855703D00F76653 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23C8634228555F8200F59D88 /* Doco Demo */;
+			targetProxy = 2346261A2855703D00F76653 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		23A966C8284EA7C300363782 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -248,6 +313,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		234626152855703300F76653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L6RK3LGGW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		234626162855703300F76653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L6RK3LGGW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		23A966CC284EA7C300363782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -377,6 +460,7 @@
 				DEVELOPMENT_TEAM = 3L6RK3LGGW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -407,6 +491,7 @@
 				DEVELOPMENT_TEAM = 3L6RK3LGGW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -435,6 +520,7 @@
 				DEVELOPMENT_TEAM = 3L6RK3LGGW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -463,6 +549,7 @@
 				DEVELOPMENT_TEAM = 3L6RK3LGGW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -482,6 +569,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		234626172855703300F76653 /* Build configuration list for PBXAggregateTarget "All Demos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234626152855703300F76653 /* Debug */,
+				234626162855703300F76653 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		23A966BA284EA7C200363782 /* Build configuration list for PBXProject "ComboButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -512,11 +608,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2383118B285043F900FD3EA2 /* DSFComboButton */ = {
+		2346261C285570DB00F76653 /* DSFComboButtonDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = DSFComboButton;
+			productName = DSFComboButtonDynamic;
 		};
-		23C8635228555F9000F59D88 /* DSFComboButton */ = {
+		2383118B285043F900FD3EA2 /* DSFComboButton */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DSFComboButton;
 		};
