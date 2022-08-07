@@ -30,7 +30,6 @@ import AppKit
 import Foundation
 
 extension DSFComboButton {
-
 	func setup() {
 		self.wantsLayer = true
 		self.layer!.masksToBounds = false
@@ -123,7 +122,7 @@ extension DSFComboButton {
 		dropdown.font = f
 
 		dropdown.target = self
-		dropdown.action = #selector(unifiedDidSelect(_:))
+		dropdown.action = #selector(self.unifiedDidSelect(_:))
 
 		self.addSubview(dropdown)
 
@@ -142,7 +141,6 @@ extension DSFComboButton {
 			t.perform(a, with: self)
 		}
 	}
-
 
 	@objc private func segmentedDidSelect(_ sender: NSSegmentedControl) {
 		if sender.selectedSegment == 0, let t = self.target as? NSObject, let a = self.action {
@@ -212,16 +210,23 @@ public extension DSFComboButton {
 	}
 }
 
-
 // The arrow image
-private let __ArrowImage = NSImage.CreateByLockingFocus(size: CGSize(width: 5, height: 5), isTemplate: true) { drawingRect in
-	let bezierPath = NSBezierPath()
-	bezierPath.move(to: NSPoint(x: 0.5, y: 3.5))
-	bezierPath.line(to: NSPoint(x: 2.5, y: 1.5))
-	bezierPath.line(to: NSPoint(x: 4.5, y: 3.5))
-	NSColor.black.setStroke()
-	bezierPath.lineWidth = 1
-	bezierPath.stroke()
-}
+private let __ArrowImage: NSImage = {
+	let image = NSImage(
+		size: CGSize(width: 7, height: 5),
+		flipped: false
+	) { rect in
+		let bezierPath = NSBezierPath()
+		bezierPath.move(to: NSPoint(x: 0.5, y: 4))
+		bezierPath.line(to: NSPoint(x: 3.5, y: 1))
+		bezierPath.line(to: NSPoint(x: 6.5, y: 4))
+		NSColor.black.setStroke()
+		bezierPath.lineWidth = 1
+		bezierPath.stroke()
+		return true
+	}
+	image.isTemplate = true
+	return image
+}()
 
 #endif
