@@ -68,7 +68,7 @@ extension DSFComboButton {
 
 		sc.setImage(self.image, forSegment: 0)
 		sc.setImageScaling(.scaleProportionallyDown, forSegment: 0)
-		sc.setLabel(self.title ?? "", forSegment: 0)
+		sc.setLabel(self.title, forSegment: 0)
 		sc.setImage(__ArrowImage, forSegment: 1)
 		sc.setAlignment(.justified, forSegment: 0)
 
@@ -97,7 +97,7 @@ extension DSFComboButton {
 		dropdown.translatesAutoresizingMaskIntoConstraints = false
 		dropdown.wantsLayer = true
 		dropdown.isBordered = true
-		dropdown.title = self.title ?? ""
+		dropdown.title = self.title
 		dropdown.image = self.image
 
 		if dropdown.title.count == 0 {
@@ -168,7 +168,7 @@ public extension DSFComboButton {
 	override var intrinsicContentSize: NSSize {
 		switch self.style {
 		case .split: return self.segmented?.intrinsicContentSize ?? .zero
-		case .unified: return self.segmented?.intrinsicContentSize ?? .zero
+		case .unified: return self.unified?.intrinsicContentSize ?? .zero
 		}
 	}
 
