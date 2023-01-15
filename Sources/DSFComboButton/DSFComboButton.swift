@@ -84,7 +84,7 @@ import Foundation
 
 	// MARK: Style settings
 
-	@objc public enum Style: UInt {
+	@objc public enum Style: Int {
 		case split = 0
 		case unified = 1
 	}
@@ -100,7 +100,7 @@ import Foundation
 	///
 	///   split == 0
 	///   unified == 1
-	@IBInspectable public var ib_style: UInt = Style.split.rawValue {
+	@IBInspectable public var ib_style: Int = Style.split.rawValue {
 		didSet {
 			self.style = Style(rawValue: self.ib_style) ?? .split
 		}
