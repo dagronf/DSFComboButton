@@ -32,12 +32,12 @@ import Foundation
 @IBDesignable public class DSFComboButton: NSControl {
 
 	/// The title for the button
-	@IBInspectable public var title: String? = "" {
+	@IBInspectable public var title: String = "" {
 		didSet {
-			self.segmented?.setLabel(self.title ?? "", forSegment: 0)
+			self.segmented?.setLabel(self.title, forSegment: 0)
 
 			if let u = self.unified {
-				u.title = self.title ?? ""
+				u.title = self.title
 				u.image = self.image
 				if u.title.isEmpty {
 					u.imagePosition = .imageOnly

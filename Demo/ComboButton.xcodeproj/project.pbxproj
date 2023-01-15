@@ -22,8 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2346261D285570DB00F76653 /* DSFComboButtonDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2346261C285570DB00F76653 /* DSFComboButtonDynamic */; };
-		2346261E285570DB00F76653 /* DSFComboButtonDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 2346261C285570DB00F76653 /* DSFComboButtonDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		23250B352973D8D6000C8168 /* DSFComboButton-shared in Frameworks */ = {isa = PBXBuildFile; productRef = 23250B342973D8D6000C8168 /* DSFComboButton-shared */; };
+		23250B362973D8D6000C8168 /* DSFComboButton-shared in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 23250B342973D8D6000C8168 /* DSFComboButton-shared */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2383118C285043F900FD3EA2 /* DSFComboButton in Frameworks */ = {isa = PBXBuildFile; productRef = 2383118B285043F900FD3EA2 /* DSFComboButton */; };
 		23A966C3284EA7C200363782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A966C2284EA7C200363782 /* AppDelegate.swift */; };
 		23A966C5284EA7C200363782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A966C4284EA7C200363782 /* ViewController.swift */; };
@@ -59,7 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2346261E285570DB00F76653 /* DSFComboButtonDynamic in Embed Frameworks */,
+				23250B362973D8D6000C8168 /* DSFComboButton-shared in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2346261D285570DB00F76653 /* DSFComboButtonDynamic in Frameworks */,
+				23250B352973D8D6000C8168 /* DSFComboButton-shared in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +191,7 @@
 			);
 			name = "Doco Demo";
 			packageProductDependencies = (
-				2346261C285570DB00F76653 /* DSFComboButtonDynamic */,
+				23250B342973D8D6000C8168 /* DSFComboButton-shared */,
 			);
 			productName = "Doco Demo";
 			productReference = 23C8634328555F8200F59D88 /* Doco Demo.app */;
@@ -608,9 +608,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2346261C285570DB00F76653 /* DSFComboButtonDynamic */ = {
+		23250B342973D8D6000C8168 /* DSFComboButton-shared */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = DSFComboButtonDynamic;
+			productName = "DSFComboButton-shared";
 		};
 		2383118B285043F900FD3EA2 /* DSFComboButton */ = {
 			isa = XCSwiftPackageProductDependency;
