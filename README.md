@@ -2,7 +2,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/github/v/tag/dagronf/DSFComboButton" />
-    <img src="https://img.shields.io/badge/macOS-10.14+-red" />
+    <img src="https://img.shields.io/badge/macOS-10.13+-red" />
     <img src="https://img.shields.io/badge/License-MIT-lightgrey" />
     <a href="https://swift.org/package-manager">
         <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
@@ -88,7 +88,7 @@ ctrl-drag from the `DSFComboButton` control to the code.
 ```
 MIT License
 
-Copyright (c) 2022 Darren Ford
+Copyright (c) 2023 Darren Ford
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

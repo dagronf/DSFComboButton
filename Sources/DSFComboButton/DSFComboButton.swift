@@ -132,11 +132,11 @@ import Foundation
 
 	/// The alignment of the text/image within the control
 	///
-	///   left = 0 // Visually left aligned
-	///   right = 1 // Visually right aligned
-	///   center = 2 // Visually centered
+	///   left = 0      // Visually left aligned
+	///   right = 1     // Visually right aligned
+	///   center = 2    // Visually centered
 	///   justified = 3 // Fully-justified. The last line in a paragraph is natural-aligned.
-	///   natural = 4 // Indicates the default alignment for script
+	///   natural = 4   // Indicates the default alignment for script
 	@IBInspectable public var ib_textAlignment: NSInteger = NSTextAlignment.justified.rawValue {
 		didSet {
 			self.segmented?.setAlignment(NSTextAlignment(rawValue: ib_textAlignment)!, forSegment: 0)
