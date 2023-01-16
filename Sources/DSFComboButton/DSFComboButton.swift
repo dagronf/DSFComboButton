@@ -84,6 +84,7 @@ import Foundation
 
 	// MARK: Style settings
 
+	/// The supported control styles
 	@objc public enum Style: Int {
 		case split = 0
 		case unified = 1
@@ -124,6 +125,7 @@ import Foundation
 
 	// MARK: Text alignment
 
+	/// The alignment for the text on the control
 	public var textAlignment: NSTextAlignment = .center {
 		didSet {
 			self.segmented?.setAlignment(textAlignment, forSegment: 0)
@@ -162,16 +164,19 @@ import Foundation
 	}
 
 	// MARK: Initializers
-	
+
+	/// Create a DSFComboBox control
 	public init() {
 		super.init(frame: .zero)
 	}
-	
+
+	/// Create a DSFComboBox control
 	override public init(frame frameRect: NSRect) {
 		super.init(frame: frameRect)
 		self.setup()
 	}
-	
+
+	/// Create a DSFComboBox control
 	public required init?(coder: NSCoder) {
 		super.init(coder: coder)
 		self.setup()
